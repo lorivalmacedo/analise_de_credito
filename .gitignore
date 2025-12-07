@@ -1,0 +1,12 @@
+# Arquivos compilados
+__pycache__/
+*.pyc
+
+# cache
+.cache/
+.pytest_cache/
+
+# Ambientes virtuais
+venv/
+.env/
+.venv/
