@@ -5,7 +5,7 @@ NUM_BENCHMARK_COMPANIES = 20
 SECTOR = "Comércio"
 LOCATION = "SP"
 
-# Empresa Alvo (dados fixos)
+# Empresa Alvo
 def generate_target_company():
     return {
         "company_id": "C0001",
@@ -83,7 +83,7 @@ def generate_benchmark_company(index: int):
         }
     }
 
-# Funções públicas para acessar os dados
+# Função para carregar os dados
 def load_mock_data():
     """
     Retorna:
@@ -95,7 +95,7 @@ def load_mock_data():
     return target, benchmark
 
 
-# Execução de teste (opcional)
+# Teste local
 if __name__ == "__main__":
     t, b = load_mock_data()
     print("Empresa alvo:", t)

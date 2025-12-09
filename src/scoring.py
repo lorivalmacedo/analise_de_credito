@@ -1,6 +1,6 @@
 def score_position(position: str):
     """
-    Pontuações simples e explicáveis.
+    Pontuações simples.
     """
     if position == "above_mean":
         return 2
@@ -47,7 +47,7 @@ def generate_score(benchmark_report):
         pts = score_position(pos)
 
         raw_score += pts
-        max_score += 2  # max por indicador = 2
+        max_score += 2  # max por indicador
 
         detailed_results[indicator] = {
             "target_value": stats["target_value"],

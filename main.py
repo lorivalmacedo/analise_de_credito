@@ -46,7 +46,7 @@ def run_pipeline():
         )
     print()
 
-    # 4. (Opcional) Gerar parecer via IA
+    # 4. Parecer via IA
     openai_key = os.getenv("OPENAI_API_KEY")
 
     if LLM_AVAILABLE and openai_key:

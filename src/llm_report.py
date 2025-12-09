@@ -6,14 +6,14 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def build_prompt(score_report, benchmark_report):
     """
-    Monta um prompt claro para o modelo gerar um parecer técnico.
+    Criando o prompt para o modelo gerar um parecer técnico
     """
 
     final_score = score_report["final_score"]
     risk_class = score_report["risk_class"]
     details = score_report["details"]
 
-    # Criar texto de indicadores
+    # Texto de indicadores
     indicators_text = ""
     for ind, data in details.items():
         indicators_text += (
@@ -66,4 +66,4 @@ def generate_credit_report(score_report, benchmark_report, model="gpt-4.1"):
 
 # Teste local
 if __name__ == "__main__":
-    print("Teste manual — configure OPENAI_API_KEY para usar.")
+    print("Teste manual — configure OPENAI_API_KEY.")

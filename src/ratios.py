@@ -1,14 +1,14 @@
 def safe_division(a, b):
-    """Evita divisão por zero retornando None."""
+    """Evitar divisão por zero retornando None."""
     try:
         return a / b if b != 0 else None
     except:
         return None
 
 
-# Cálculo dos principais indicadores financeiros
+# Cálculos dos principais indicadores financeiros
 def calculate_liquidity_ratios(fin):
-    """Retorna indicadores de liquidez."""
+    """Indicadores de liquidez."""
     return {
         "current_ratio": safe_division(fin["assets_current"], fin["liabilities_current"])
     }
